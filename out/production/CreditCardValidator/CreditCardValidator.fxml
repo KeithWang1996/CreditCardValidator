@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="320.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller">
+   <children>
+      <Label layoutX="24.0" layoutY="20.0" text="Card Number:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="ccField" layoutX="24.0" layoutY="47.0" onKeyTyped="#onCCFieldTextChanged" prefHeight="39.0" prefWidth="272.0" promptText="XXXXXXXXXXXXXXXX">
+         <font>
+            <Font size="18.0" />
+         </font>
+         <padding>
+            <Insets left="40.0" />
+         </padding>
+      </TextField>
+      <TextField fx:id="dateField" layoutX="24.0" layoutY="128.0" prefHeight="39.0" prefWidth="111.0" promptText="mm/yyyy">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </TextField>
+      <Label layoutX="24.0" layoutY="101.0" text="Expiration Date">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="185.0" layoutY="101.0" text="CVV">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="cvvField" layoutX="185.0" layoutY="128.0" prefHeight="39.0" prefWidth="111.0" promptText="XXX">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </TextField>
+      <HBox alignment="CENTER" layoutX="24.0" layoutY="47.0" prefHeight="39.0" prefWidth="40.0">
+         <children>
+            <ImageView fx:id="ccImage" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+               <viewport>
+                  <Rectangle2D />
+               </viewport>
+               <image>
+                  <Image url="@logos/empty.png" />
+               </image>
+            </ImageView>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" layoutX="250.0" layoutY="47.0" prefHeight="39.0" prefWidth="46.0">
+         <children>
+            <ImageView fx:id="checkImage" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@logos/check.png" />
+               </image>
+            </ImageView>
+         </children>
+      </HBox>
+   </children>
+</Pane>
